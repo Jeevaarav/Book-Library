@@ -1,0 +1,17 @@
+<div class="book-main">
+  <div class="Book">
+    <h2>Book Details</h2>
+  </div>
+  <div>
+    @for (book of dataBook; track $index) {
+      <h3>Id: {{book.id}}, Name: {{book.coursename}} |
+        @if(viewShown[$index]){
+          <a (click)="viewDetails($index)">View Details</a>
+        }
+      </h3>
+      @if (description[$index]) {
+        <p>{{book.description}}</p>
+      }
+    }
+  </div>
+</div>

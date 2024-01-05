@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "bookDetails": [
+    {
+      "id": "B_01",
+      "coursename": "Core Java",
+      "description": "Java is a high-level, versatile, object-oriented programming language initially developed by Sun Microsystems and later acquired by Oracle Corporation. It is designed to be platform-independent, meaning that Java programs can run on any device or system with a Java Virtual Machine (JVM) installed, regardless of the underlying hardware and operating system."
+    },
+    {
+      "id": "B_02",
+      "coursename": "Angular",
+      "description": "Angular is a popular open-source web application framework developed and maintained by Google. It is designed to make both the development and testing of such applications easier by providing a comprehensive framework for building dynamic, single-page web applications (SPAs)."
+    },
+    {
+      "id": "B_03",
+      "coursename": "Hibernate",
+      "description": "Hibernate is a widely used open-source object-relational mapping (ORM) framework for Java applications. Developed by Red Hat, Hibernate simplifies the process of database interaction in Java applications by providing a high-level, object-oriented programming interface."
+    },
+    {
+      "id": "B_04",
+      "coursename": "React",
+      "description": "React is an open-source JavaScript library for building user interfaces, particularly for single-page applications where the user interface needs to be dynamic and responsive. It was developed by Facebook and is widely used for creating interactive and reusable UI components."
+    }
+  ]
+}

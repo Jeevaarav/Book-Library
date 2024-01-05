@@ -1,0 +1,54 @@
+<div class="addbook">
+@for (book of dataBook; track book.id) {
+  <div class="main-div">
+    <div>
+      <h1>ID : {{book.id}}</h1>
+    </div>
+    <div>
+      <h2>{{book.coursename}}</h2>
+    </div>
+    <div>
+      <p>{{book.description}}</p>
+    </div>
+    <div class="button-flex">
+      <div><button class="btn" (click)="updateBook(this.book.id)">Update</button></div>
+      <div><i class="fa-solid fa-trash" (click)="deleteBook(this.book.id)"></i></div>
+    </div>
+  </div>
+  }
+
+  @if (showForm) {
+
+    <div class="addbook-form">
+      <form action="" [formGroup]="Addnewbook" (ngSubmit)="Addnewbook.valid && bookUpdation()">
+        <div class="close">
+          <i class="fa-solid fa-xmark" (click)="closeForm()"></i>
+        </div>
+        <div class="form-control">
+          <label for="">Book ID</label>
+          <input type="tel" placeholder="ID" formControlName="id">
+          @if(Addnewbook.controls['id'].errors?.['required'] && Addnewbook.controls['id'].dirty){
+            <small>Book ID is required</small>
+          }
+        </div>
+        <div class="form-control">
+          <label for="">Book Name</label>
+          <input type="text" placeholder="Book Name" formControlName="coursename">
+          @if(Addnewbook.controls['coursename'].errors?.['required'] && Addnewbook.controls['coursename'].dirty){
+            <small>Book Name is required</small>
+          }
+        </div>
+        <div class="form-control">
+          <label for="">Book Description</label>
+          <textarea name="" id="" cols="30" rows="7" placeholder="Description" formControlName="description"></textarea>
+          @if(Addnewbook.controls['description'].errors?.['required'] && Addnewbook.controls['description'].dirty){
+            <small>Book Description is required</small>
+          }
+        </div>
+        <div>
+          <button class="btn">Update Book</button>
+        </div>
+      </form>
+    </div>
+  }
+</div>
